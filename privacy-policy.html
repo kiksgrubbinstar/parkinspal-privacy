@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the ParkinsPal mobile application.">
+  <meta name="theme-color" content="#18332a">
+  <title>Privacy Policy | ParkinsPal</title>
+  <style>
+    :root {
+      --ink: #18332a;
+      --muted: #5e7269;
+      --primary: #2b8c7f;
+      --primary-soft: #d9f0ea;
+      --paper: #ffffff;
+      --canvas: #f4f7f4;
+      --border: #d9e4dd;
+      --warning: #9b6324;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 3%, rgba(43, 140, 127, 0.16), transparent 30rem),
+        linear-gradient(180deg, #edf5f0 0, var(--canvas) 32rem);
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a { color: #176f66; }
+    a:hover { color: var(--ink); }
+
+    .shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 72px;
+    }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      padding: clamp(32px, 7vw, 72px);
+      color: #fff;
+      background: linear-gradient(135deg, #18332a 0%, #1f6f67 58%, #3a9e92 100%);
+      border-radius: 34px;
+      box-shadow: 0 24px 70px rgba(19, 42, 34, 0.16);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -110px;
+      top: -165px;
+      border: 56px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 46px;
+      font-size: 18px;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: var(--ink);
+      background: var(--primary-soft);
+      border-radius: 14px;
+      font-size: 24px;
+    }
+
+    h1, h2 { line-height: 1.14; letter-spacing: -0.03em; }
+    h1 { max-width: 760px; margin: 0 0 18px; font-size: clamp(42px, 8vw, 78px); }
+    h2 { margin: 0 0 14px; font-size: clamp(25px, 4vw, 34px); }
+    h3 { margin: 28px 0 6px; font-size: 20px; }
+
+    .hero p { max-width: 760px; margin: 0; color: #e9f4f0; font-size: 19px; }
+    .effective { margin-top: 26px !important; color: #c8e3d9 !important; font-size: 15px !important; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      margin-top: 34px;
+    }
+
+    nav {
+      position: sticky;
+      top: 20px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    nav strong { display: block; margin-bottom: 10px; }
+    nav a { display: block; padding: 6px 0; color: var(--muted); text-decoration: none; font-size: 14px; line-height: 1.35; }
+    nav a:hover { color: var(--primary); }
+
+    main {
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: 0 16px 45px rgba(19, 42, 34, 0.08);
+    }
+
+    section { padding: clamp(28px, 5vw, 48px); border-bottom: 1px solid var(--border); }
+    section:last-child { border-bottom: 0; }
+    section p:last-child, section ul:last-child { margin-bottom: 0; }
+    ul { padding-left: 1.2em; }
+    li + li { margin-top: 7px; }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .summary div {
+      padding: 18px;
+      background: #f3f8f5;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .summary strong { display: block; margin-bottom: 3px; }
+    .summary span { color: var(--muted); font-size: 15px; line-height: 1.45; }
+
+    .callout {
+      padding: 20px 22px;
+      background: #fff7ec;
+      border-left: 4px solid #e8a96b;
+      border-radius: 5px 18px 18px 5px;
+      color: #6f4b21;
+    }
+
+    .contact {
+      display: inline-block;
+      padding: 14px 18px;
+      background: var(--primary-soft);
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer { padding: 30px 12px 0; text-align: center; color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 820px) {
+      .shell { width: min(100% - 20px, 720px); padding-top: 10px; }
+      .hero { border-radius: 24px; }
+      .brand { margin-bottom: 34px; }
+      .layout { grid-template-columns: 1fr; gap: 18px; }
+      nav { position: static; display: none; }
+      main { border-radius: 24px; }
+      .summary { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      .shell { width: 100%; padding: 0; }
+      .hero { color: #000; background: #fff; box-shadow: none; padding: 0 0 24px; border-radius: 0; }
+      .hero p, .effective { color: #333 !important; }
+      .brand-mark, nav, .hero::after { display: none; }
+      .brand { margin-bottom: 12px; }
+      .layout { display: block; margin: 0; }
+      main { border: 0; box-shadow: none; }
+      section { padding: 18px 0; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">P</span> ParkinsPal</div>
+      <h1>Privacy, explained clearly.</h1>
+      <p>ParkinsPal keeps your symptom logs, medications, notes, and optional voice recordings on your device. We do not operate a server that receives this information.</p>
+      <p class="effective">Effective September 21, 2026 · Last updated September 21, 2026</p>
+    </header>
+
+    <div class="layout">
+      <nav aria-label="Policy sections">
+        <strong>On this page</strong>
+        <a href="#overview">Privacy at a glance</a>
+        <a href="#scope">Scope</a>
+        <a href="#information">Information handled</a>
+        <a href="#use">How information is used</a>
+        <a href="#permissions">Device permissions</a>
+        <a href="#storage">Storage and backups</a>
+        <a href="#sharing">Sharing and disclosure</a>
+        <a href="#retention">Retention and deletion</a>
+        <a href="#choices">Your choices and rights</a>
+        <a href="#security">Security</a>
+        <a href="#health">Health information</a>
+        <a href="#children">Children's privacy</a>
+        <a href="#international">International users</a>
+        <a href="#changes">Policy changes</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>Privacy at a glance</h2>
+          <p>ParkinsPal ("ParkinsPal," "we," "us," or "our") is a wellness-tracking application that helps users record symptoms, medications, reminders, notes, and optional voice recordings. This Policy explains how information is handled when you use the ParkinsPal mobile application (the "App") or contact us for support.</p>
+          <div class="summary">
+            <div><strong>No account</strong><span>ParkinsPal does not require or offer a user account.</span></div>
+            <div><strong>Stored on your device</strong><span>App entries and recordings are not sent to a ParkinsPal server.</span></div>
+            <div><strong>No advertising or tracking</strong><span>We do not sell data, show targeted ads, or track you across apps or websites.</span></div>
+            <div><strong>No analytics SDKs</strong><span>The App does not include third-party advertising, analytics, or crash-reporting SDKs.</span></div>
+          </div>
+        </section>
+
+        <section id="scope">
+          <h2>1. Scope</h2>
+          <p>This Policy applies to the ParkinsPal mobile App and support communications sent to us. It does not govern the independent practices of Apple, Google, your device manufacturer, mobile carrier, healthcare provider, or any service you choose to use outside the App.</p>
+        </section>
+
+        <section id="information">
+          <h2>2. Information handled by the App</h2>
+          <h3>Symptom and wellness information</h3>
+          <p>If you choose to create a symptom log, the App stores the log date, shaking or tremor severity, stiffness, slow-movement difficulty, walking difficulty, balance or unsteadiness, fatigue, mood, written notes, and creation time. The App uses these entries to display history and trends on your device.</p>
+          <h3>Medication and reminder information</h3>
+          <p>If you add a medication, the App stores the medication name, dosage, frequency, scheduled times, reminder preference, local notification identifiers, and creation time. This information is used to display your medication schedule and schedule local reminders.</p>
+          <h3>Voice recordings</h3>
+          <p>If you choose to record a voice note, the App accesses the microphone after requesting permission and saves the audio file in the App's private storage area on your device. The App also stores a local file reference so the recording can be played from symptom history. We do not receive or listen to these recordings.</p>
+          <h3>App settings and technical records</h3>
+          <p>The App stores limited settings locally, such as acceptance of the terms, notification preferences, and identifiers needed to manage scheduled notifications. The App does not create an advertising identifier, user profile, or account identifier.</p>
+          <h3>Support communications</h3>
+          <p>If you contact us by email, we receive the information you voluntarily provide, such as your email address, message, and attachments. Please do not send medical records or other sensitive health information by email. Support correspondence is used only to respond, troubleshoot, protect the App, and comply with applicable legal obligations.</p>
+          <h3>Information not collected through the App</h3>
+          <p>The App does not transmit to us or our servers your symptom, wellness, medication, reminder, voice, or written-note information. It also does not transmit location, contacts, photos, videos, browsing or search history, payment information, government identifiers, or advertising identifiers.</p>
+        </section>
+
+        <section id="use">
+          <h2>3. How information is used</h2>
+          <p>Information stored on your device is processed locally to:</p>
+          <ul>
+            <li>save and display symptom logs and history;</li>
+            <li>calculate and display weekly, monthly, and yearly trends;</li>
+            <li>save medication schedules;</li>
+            <li>schedule and manage local medication and affirmation reminders;</li>
+            <li>record and play optional voice notes; and</li>
+            <li>remember basic App settings.</li>
+          </ul>
+          <p>Support information that you send us is used to respond, diagnose problems, maintain security, and comply with law. We do not use health or support information for advertising or automated decision-making.</p>
+        </section>
+
+        <section id="permissions">
+          <h2>4. Device permissions</h2>
+          <h3>Microphone</h3>
+          <p>Microphone access is used only to create a voice note when you use the recording feature. You may deny or revoke access in device settings. If access is denied, the rest of the App remains available, but voice recording will not work.</p>
+          <h3>Notifications</h3>
+          <p>Notification permission is used for medication and daily affirmation reminders. Notifications are scheduled locally using the operating system. You may deny or revoke permission in device settings. Doing so prevents reminders from appearing but does not delete medication information already stored in the App.</p>
+          <p>ParkinsPal does not request access to location, contacts, calendars, photos, camera, Bluetooth, or HealthKit.</p>
+        </section>
+
+        <section id="storage">
+          <h2>5. Storage, transmission, and backups</h2>
+          <p>App information is stored in the App's sandboxed storage on your device, including an on-device SQLite database and local audio files. ParkinsPal does not operate a cloud database or backend that receives this information.</p>
+          <p>Your operating system or a backup service you enable may include App data in an encrypted device or cloud backup. Those backups are controlled by you and the relevant platform provider, not by ParkinsPal. Review your Apple iCloud, Finder, Google, or device-backup settings if you do not want App data included in backups.</p>
+        </section>
+
+        <section id="sharing">
+          <h2>6. Sharing and disclosure</h2>
+          <p>We do not sell, rent, license, or share App health information with advertisers, data brokers, analytics providers, employers, insurers, healthcare providers, or other third parties. We do not use App information for targeted advertising or cross-context behavioral advertising.</p>
+          <p>Information may be handled by others only in these limited situations:</p>
+          <ul>
+            <li><strong>At your direction:</strong> If you independently show, play, copy, back up, or disclose information from your device, that disclosure is controlled by you.</li>
+            <li><strong>Platform providers:</strong> Apple, Google, device manufacturers, or carriers may process information for operating-system services, App Store distribution, device backups, or diagnostics under their own policies and your settings.</li>
+            <li><strong>Support providers:</strong> If you email us, our email provider processes the correspondence so we can receive and answer it.</li>
+            <li><strong>Legal and safety reasons:</strong> We may disclose support correspondence if reasonably necessary to comply with law, enforce rights, prevent abuse, or protect users and others. Because App records remain on your device, we generally do not possess them to disclose.</li>
+            <li><strong>Business transition:</strong> If responsibility for ParkinsPal changes, support records and policy obligations may transfer to the successor, subject to law. On-device App records are not transferred to us because we do not possess them.</li>
+          </ul>
+          <p>Any service provider processing information for us is expected to protect it and use it only for the requested service.</p>
+        </section>
+
+        <section id="retention">
+          <h2>7. Retention and deletion</h2>
+          <p>Symptom logs, medication entries, written notes, voice recordings, and settings remain on your device unless changed or removed through available App controls, removed by the operating system, or deleted when you uninstall the App. The current App allows individual medication entries to be deleted. It does not currently provide an in-App control to delete individual symptom logs or a remote account-deletion function because no account or remote copy exists.</p>
+          <p>To delete all ParkinsPal information stored by the App, uninstall the App. Deleting the App may not delete copies in device backups; backup copies are governed by your backup provider's settings and retention practices. We cannot access or remotely delete information stored on your device or in your personal device backup.</p>
+          <p>Support emails may be retained as reasonably necessary to respond, maintain business and security records, resolve disputes, and comply with law. You may request deletion of support correspondence by emailing us, subject to legal retention obligations.</p>
+        </section>
+
+        <section id="choices">
+          <h2>8. Your choices and privacy rights</h2>
+          <p>You may choose whether to enter information, revoke microphone or notification permissions, delete individual medication entries, delete all local App information by uninstalling the App, and manage device backups through your platform account.</p>
+          <p>Depending on where you live, privacy law may provide additional rights regarding personal information we possess, including access, correction, deletion, restriction, objection, portability, or appeal. We do not discriminate against anyone for exercising a privacy right. Because we do not receive App records, we cannot identify, retrieve, change, or delete those records remotely.</p>
+          <p>ParkinsPal does not sell personal information or share it for cross-context behavioral advertising, so there is no sale or targeted-advertising opt-out mechanism in the App.</p>
+        </section>
+
+        <section id="security">
+          <h2>9. Security</h2>
+          <p>We minimize risk by keeping App information on your device and not operating a backend containing user health records. App information benefits from operating-system protections such as application sandboxing, device passcodes, and device encryption when enabled. You are responsible for securing your device and backups.</p>
+          <p>No storage method is completely secure. A lost, unlocked, compromised, or shared device may expose locally stored information. ParkinsPal does not separately encrypt each database field or audio file beyond protections provided by the operating system and your device configuration.</p>
+        </section>
+
+        <section id="health">
+          <h2>10. Health information and medical privacy</h2>
+          <p>ParkinsPal is a direct-to-consumer wellness and self-tracking tool. It is not a healthcare provider, health plan, healthcare clearinghouse, or medical-record system, and using the App does not create a healthcare-provider relationship. ParkinsPal is not intended for diagnosis, treatment, emergencies, or clinical decision-making.</p>
+          <div class="callout">Health privacy laws such as HIPAA may not apply to information entered into a consumer App when the developer is not acting for a HIPAA-covered entity. A healthcare provider may have separate duties for information you choose to share directly with them.</div>
+        </section>
+
+        <section id="children">
+          <h2>11. Children's privacy</h2>
+          <p>ParkinsPal is intended for adults and is not directed to children under 13. The App's Terms require users to be at least 18 or the age of majority in their jurisdiction. We do not knowingly collect children's personal information through the App. If a parent or guardian believes a child sent us personal information in a support message, please contact us so we can review and delete it when appropriate.</p>
+        </section>
+
+        <section id="international">
+          <h2>12. International users</h2>
+          <p>ParkinsPal can be used in different locations, but App records remain on the user's device unless the user enables a platform backup. If you contact us, support correspondence may be processed in the United States and by the email services used to deliver the message. Where required, we handle such correspondence under applicable law and appropriate safeguards.</p>
+        </section>
+
+        <section id="changes">
+          <h2>13. Changes to this Policy</h2>
+          <p>We may update this Policy to reflect changes to the App, law, or our practices. We will update the date at the top and publish the revised Policy at the same URL. If a change materially affects how information is handled, we will provide additional notice when reasonably required.</p>
+        </section>
+
+        <section id="contact">
+          <h2>14. Contact us</h2>
+          <p>For privacy questions or requests concerning support correspondence, contact:</p>
+          <p><a class="contact" href="mailto:parkinspal@gmail.com">parkinspal@gmail.com</a></p>
+          <p class="callout">Please do not email symptom logs, voice recordings, medical records, or other sensitive health information.</p>
+          <p><small>This Policy describes ParkinsPal's current practices and is not a substitute for legal advice. If the App's features or data practices change, this Policy and the App Store privacy disclosures must be reviewed and updated.</small></p>
+        </section>
+      </main>
+    </div>
+
+    <footer>© 2026 ParkinsPal · Privacy-first wellness tracking</footer>
+  </div>
+</body>
+</html>
